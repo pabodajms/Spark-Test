@@ -10,15 +10,13 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String title;        
-    private String description;
+    private String description; 
     private boolean completed;
 
     // Constructors
     public Task() {}
 
-    public Task(String title, String description, boolean completed) {
-        this.title = title;
+    public Task(String description, boolean completed) {  
         this.description = description;
         this.completed = completed;
     }
@@ -32,19 +30,11 @@ public class Task {
         this.id = id;
     }
 
-    public String getTitle() { 
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
+    public String getDescription() { 
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description) { 
         this.description = description;
     }
 

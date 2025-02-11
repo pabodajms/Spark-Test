@@ -30,8 +30,7 @@ public class TaskService {
         Optional<Task> optionalTask = taskRepository.findById(id);
         if (optionalTask.isPresent()) {
             Task task = optionalTask.get();
-            task.setTitle(taskDetails.getTitle());  
-            task.setDescription(taskDetails.getDescription());
+            task.setDescription(taskDetails.getDescription()); // Removed setTitle()
             task.setCompleted(taskDetails.isCompleted());
             return taskRepository.save(task);
         }
